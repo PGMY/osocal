@@ -9,7 +9,7 @@ $('#calendar').clndr({
 
 // there are a lot of options. the rabbit hole is deep.
 $('#calendar').clndr({
-  template: $('#calendar-template').html(),
+  template: $('#full-clndr-template').html(),
   events: [
     { date: '2016-01-28', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
   ],
@@ -23,5 +23,6 @@ $('#calendar').clndr({
   },
   doneRendering: function() {
     console.log('this would be a fine place to attach custom event handlers.');
-  }
+  },
+  forceSixRows: true
 });
