@@ -1,14 +1,14 @@
 
 // this will use clndr's default template, which you probably don't want.
-$('#calendar').clndr();
+$('#clndr').clndr();
 
 // so instead, pass in your template as a string!
-$('#calendar').clndr({
+$('#clndr').clndr({
   template: $('#calendar-template').html()
 });
 
 // there are a lot of options. the rabbit hole is deep.
-$('#calendar').clndr({
+$('#clndr').clndr({
   template: $('#full-clndr-template').html(),
   events: [
     { date: '2016-01-28', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
