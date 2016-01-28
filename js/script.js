@@ -11,7 +11,7 @@ $('#calendar').clndr({
 $('#calendar').clndr({
   template: $('#calendar-template').html(),
   events: [
-    { date: '2013-09-09', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
+    { date: '2016-01-28', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
   ],
   clickEvents: {
     click: function(target) {
