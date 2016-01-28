@@ -1,5 +1,6 @@
 #full-clndr .clndr-grid {
     width: 100%;
+    border-right: 0px solid white;
 }
 
 #full-clndr .event-listing {
