@@ -2,248 +2,45 @@ var clndr = {};
 
 $( function() {
 
-  // PARDON ME while I do a little magic to keep these titles relevant for the rest of time...
+  // PARDON ME while I do a little magic to keep these events relevant for the rest of time...
   var currentMonth = moment().format('YYYY-MM');
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
 
-  var titles = [
-    {
-        date: "2016-03-12T15:00:00.000Z",
-        title: "家宝は寝て松HARU21",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "赤ブーブー"
-    },
-    {
-        date: "2016-03-26T15:00:00.000Z",
-        title: "HighカラMAX（松野カラ松中心）",
-        "holl": "幕張メッセ",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-04-23T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー2",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-04T15:00:00.000Z",
-        title: "松野十四松中心",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-07T15:00:00.000Z",
-        title: "おそ松さんスペシャルイベント（公式）",
-        "holl": "幕張メッセ",
-        "link": "http://osomatsusan.com/news/detail.php?id=1031419",
-        "location": "東京",
-        "sponsor": "公式"
-    },
-    {
-        date: "2016-05-28T15:00:00.000Z",
-        title: "家宝は寝て松3～お誕SP～",
-        "holl": "インテックス大阪",
-        "link": "",
-        "location": "大阪",
-        "sponsor": "赤ブーブー"
-    },
-    {
-        date: "2016-06-18T15:00:00.000Z",
-        title: "家宝は寝て松4",
-        "holl": "東京ビックサイト", 
-        "link": "",
-        "location": "東京",
-        "sponsor": "赤ブーブー"
-    },
-    {
-        date: "2016-06-25T15:00:00.000Z",
-        title: "松野一松中心",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-07-17T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー3",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-08-06T15:00:00.000Z",
-        title: "松野チョロ松受",
-        "holl": "TRC",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-08-20T15:00:00.000Z",
-        title: "松野おそ松受",
-        "holl": "都産台東",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-08-27T15:00:00.000Z",
-        title: "松野トド松受",
-        "holl": "TRC",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-09-17T15:00:00.000Z",
-        title: " 松野カラ松×松野一松",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-09-17T15:00:00.000Z",
-        title: "シェーパラ！～シェーパラダイス～（イヤミ中心）",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-09-17T15:00:00.000Z",
-        title: "松野一松×松野カラ松",
-        "holl": "東京ビックサイト",
-        "link": "",
-        "location": "東京",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-03-19T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー大阪",
-        "holl": "インテックス大阪",
-        "link": "",
-        "location": "大阪",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-04-30T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー大阪2",
-        "holl": "インテックス大阪",
-        "link": "",
-        "location": "大阪",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-03-20T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー福岡",
-        "holl": "福岡国際センター",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-03T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー札幌",
-        "holl": "つどーむ",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-03T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 福岡2",
-        "holl": "福岡国際会議場",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-04T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー広島",
-        "holl": "広島市中小企業会館",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-07T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 仙台",
-        "holl": "仙台国際センター",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-05-07T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー　沖縄",
-        "holl": "沖縄コンベンションセンター",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-06-11T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 名古屋",
-        "holl": "ポートメッセなごや",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-07-23T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 札幌2",
-        "holl": "つどーむ",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-07-23T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 仙台2",
-        "holl": "夢メッセみやぎ",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-07-30T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー 福岡3",
-        "holl": "福岡国際会議場",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-10-08T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー名古屋2",
-        "holl": "ポートメッセなごや",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    },
-    {
-        date: "2016-12-10T15:00:00.000Z",
-        title: "6つ子の魂☆フォーエバー名古屋3",
-        "holl": "ポートメッセなごや",
-        "link": "",
-        "location": "その他",
-        "sponsor": "スタジオYou"
-    }
-];
+  var events = [{date:'Sun Mar 13 2016 00:00:00 GMT+0900 (JST)',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Mar 27 2016 00:00:00 GMT+0900 (JST)',title:'HighカラMAX（松野カラ松中心）',url:'',location:'幕張メッセ@東京'},
+{date:'Sun Apr 24 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー2',url:'',location:'東京ビックサイト@東京'},
+{date:'Thu May 05 2016 00:00:00 GMT+0900 (JST)',title:'松野十四松中心',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun May 08 2016 00:00:00 GMT+0900 (JST)',title:'おそ松さんスペシャルイベント（公式）',url:'http://osomatsusan.com/news/detail.php?id=1031419',location:'幕張メッセ@東京'},
+{date:'Sun May 29 2016 00:00:00 GMT+0900 (JST)',title:'家宝は寝て松3～お誕SP～',url:'',location:'インテックス大阪@大阪'},
+{date:'Sun Jun 19 2016 00:00:00 GMT+0900 (JST)',title:'家宝は寝て松4',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Jun 26 2016 00:00:00 GMT+0900 (JST)',title:'松野一松中心',url:'',location:'東京ビックサイト@東京'},
+{date:'Mon Jul 18 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー3',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Aug 07 2016 00:00:00 GMT+0900 (JST)',title:'松野チョロ松受',url:'',location:'TRC@東京'},
+{date:'Sun Aug 21 2016 00:00:00 GMT+0900 (JST)',title:'松野おそ松受',url:'',location:'都産台東@東京'},
+{date:'Sun Aug 28 2016 00:00:00 GMT+0900 (JST)',title:'松野トド松受',url:'',location:'TRC@東京'},
+{date:'Sun Sep 18 2016 00:00:00 GMT+0900 (JST)',title:' 松野カラ松×松野一松',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Sep 18 2016 00:00:00 GMT+0900 (JST)',title:'シェーパラ！～シェーパラダイス～（イヤミ中心）',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Sep 18 2016 00:00:00 GMT+0900 (JST)',title:'松野一松×松野カラ松',url:'',location:'東京ビックサイト@東京'},
+{date:'Sun Mar 20 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー大阪',url:'',location:'インテックス大阪@大阪'},
+{date:'Sun May 01 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー大阪2',url:'',location:'インテックス大阪@大阪'},
+{date:'Mon Mar 21 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー福岡',url:'',location:'福岡国際センター@その他'},
+{date:'Wed May 04 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー札幌',url:'',location:'つどーむ@その他'},
+{date:'Wed May 04 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 福岡2',url:'',location:'福岡国際会議場@その他'},
+{date:'Thu May 05 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー広島',url:'',location:'広島市中小企業会館@その他'},
+{date:'Sun May 08 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 仙台',url:'',location:'仙台国際センター@その他'},
+{date:'Sun May 08 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー　沖縄',url:'',location:'沖縄コンベンションセンター@その他'},
+{date:'Sun Jun 12 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 名古屋',url:'',location:'ポートメッセなごや@その他'},
+{date:'Sun Jul 24 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 札幌2',url:'',location:'つどーむ@その他'},
+{date:'Sun Jul 24 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 仙台2',url:'',location:'夢メッセみやぎ@その他'},
+{date:'Sun Jul 31 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 福岡3',url:'',location:'福岡国際会議場@その他'},
+{date:'Sun Oct 09 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー名古屋2',url:'',location:'ポートメッセなごや@その他'},
+{date:'Sun Dec 11 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー名古屋3',url:'',location:'ポートメッセなごや@その他'}]
+
+
 
   clndr = $('#full-clndr').clndr({
     template: $('#full-clndr-template').html(),
-    titles: titles,
+    events: events,
     forceSixRows: true
   });
 
