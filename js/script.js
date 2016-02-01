@@ -11,7 +11,7 @@ $( function() {
     { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
     { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
     { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' },
-    {{date:'2016-03-13',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
+    {date:'2016-03-13',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
 {date:'2016-03-27',title:'HighカラMAX（松野カラ松中心）',url:'',location:'幕張メッセ@東京'},
 {date:'2016-04-24',title:'6つ子の魂☆フォーエバー2',url:'',location:'東京ビックサイト@東京'},
 {date:'2016-05-05',title:'松野十四松中心',url:'',location:'東京ビックサイト@東京'},
