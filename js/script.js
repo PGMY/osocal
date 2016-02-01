@@ -6,7 +6,12 @@ $( function() {
   var currentMonth = moment().format('YYYY-MM');
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
 
-  var events = [{date:'Sun Mar 13 2016 00:00:00 GMT+0900 (JST)',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
+  var events = [
+    { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: '<a href="#">Center for Beautiful Cats</a>aa' },
+    { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+    { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+    { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' },
+    {date:'Sun Mar 13 2016 00:00:00 GMT+0900 (JST)',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
 {date:'Sun Mar 27 2016 00:00:00 GMT+0900 (JST)',title:'HighカラMAX（松野カラ松中心）',url:'',location:'幕張メッセ@東京'},
 {date:'Sun Apr 24 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー2',url:'',location:'東京ビックサイト@東京'},
 {date:'Thu May 05 2016 00:00:00 GMT+0900 (JST)',title:'松野十四松中心',url:'',location:'東京ビックサイト@東京'},
@@ -34,9 +39,7 @@ $( function() {
 {date:'Sun Jul 24 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 仙台2',url:'',location:'夢メッセみやぎ@その他'},
 {date:'Sun Jul 31 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー 福岡3',url:'',location:'福岡国際会議場@その他'},
 {date:'Sun Oct 09 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー名古屋2',url:'',location:'ポートメッセなごや@その他'},
-{date:'Sun Dec 11 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー名古屋3',url:'',location:'ポートメッセなごや@その他'}]
-
-
+{date:'Sun Dec 11 2016 00:00:00 GMT+0900 (JST)',title:'6つ子の魂☆フォーエバー名古屋3',url:'',location:'ポートメッセなごや@その他'}];
 
   clndr = $('#full-clndr').clndr({
     template: $('#full-clndr-template').html(),
