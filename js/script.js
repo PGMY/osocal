@@ -7,7 +7,7 @@ $( function() {
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
 
   var events = [
-    {date:'2016-03-13',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京'},
+    {date:'2016-03-13',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京',description:"てすと"},
     {date:'2016-03-27',title:'HighカラMAX（松野カラ松中心）',url:'',location:'幕張メッセ@東京'},
     {date:'2016-04-24',title:'6つ子の魂☆フォーエバー2',url:'',location:'東京ビックサイト@東京'},
     {date:'2016-05-05',title:'松野十四松中心',url:'',location:'東京ビックサイト@東京'},
