@@ -35,7 +35,8 @@ $( function() {
     {date:'2016-07-24',title:'6つ子の魂☆フォーエバー 仙台2',url:'',location:'夢メッセみやぎ@その他'},
     {date:'2016-07-31',title:'6つ子の魂☆フォーエバー 福岡3',url:'',location:'福岡国際会議場@その他'},
     {date:'2016-10-09',title:'6つ子の魂☆フォーエバー名古屋2',url:'',location:'ポートメッセなごや@その他'},
-    {date:'2016-12-11',title:'6つ子の魂☆フォーエバー名古屋3',url:'',location:'ポートメッセなごや@その他'}];
+    {date:'2016-12-11',title:'6つ子の魂☆フォーエバー名古屋3',url:'',location:'ポートメッセなごや@その他'}
+  ];
 
   clndr = $('#full-clndr').clndr({
     template: $('#full-clndr-template').html(),
