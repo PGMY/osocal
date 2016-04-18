@@ -9,7 +9,7 @@ $( function() {
   var events = [
     {date:'2016-03-13',title:'家宝は寝て松HARU21',url:'',location:'東京ビックサイト@東京',description:"てすと"},
     {date:'2016-03-27',title:'HighカラMAX（松野カラ松中心）',url:'',location:'幕張メッセ@東京'},
-    {date:'2016-04-24',title:'6つ子の魂☆フォーエバー2',url:'',location:'東京ビックサイト@東京'},
+    {date:'2016-04-24',title:'6つ子の魂☆フォーエバー2',url:'http://www.youyou.co.jp/only/six/index.html',location:'東京ビックサイト@東京'},
     {date:'2016-05-05',title:'松野十四松中心',url:'',location:'東京ビックサイト@東京'},
     {date:'2016-05-08',title:'おそ松さんスペシャルイベント（公式）',url:'http://osomatsusan.com/news/detail.php?id=1031419',location:'幕張メッセ@東京'},
     {date:'2016-05-29',title:'家宝は寝て松3～お誕SP～',url:'',location:'インテックス大阪@大阪'},
